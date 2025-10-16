@@ -1,0 +1,26 @@
+name: Update Spotify Data
+
+on:
+  schedule:
+    - cron: '0 6 * * *'  # Tous les jours à 6h
+  workflow_dispatch:
+
+jobs:
+  scrape:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    - uses: actions/setup-python@v4
+      with:
+        python-version: '3.10'
+    - run: pip install spotipy
+    - run: python spotify.py
+      env:
+        SPOTIFY_CLIENT_ID: ${{ secrets.SPOTIFY_CLIENT_ID }}
+        SPOTIFY_CLIENT_SECRET: ${{ secrets.SPOTIFY_CLIENT_SECRET }}
+    - run: |
+        git config user.name "Bot"
+        git config user.email "bot@users.noreply.github.com"
+        git add spotify_tracks.csv
+        git diff --quiet || git commit -m "Update Spotify data"
+        git push
