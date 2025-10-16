@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://edenssz.github.io/pageshtml/sitemap.xml
+Sitemap: https://song.pianomaker.art/sitemap.xml
