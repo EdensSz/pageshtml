@@ -15,7 +15,7 @@ with open('songs.csv', 'r', encoding='utf-8') as f:
     songs = list(reader)
 
 # Générer le sitemap
-base_url = "https://edenssz.github.io/pageshtml"
+base_url = "https://song.pianomaker.art"
 today = datetime.now().strftime('%Y-%m-%d')
 
 sitemap = '''<?xml version="1.0" encoding="UTF-8"?>
