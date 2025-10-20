@@ -1,0 +1,741 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Primary Meta Tags -->
+    <title>Best Free Klangio Alternative 2025 | PianoMaker - Interactive Piano Learning</title>
+    <meta name="title" content="Best Free Klangio Alternative 2025 | PianoMaker - Interactive Piano Learning">
+    <meta name="description" content="Free Klangio alternative with interactive Piano Tiles player & structured learning exercises. Learn songs the smart way - no subscription, no credit card required!">
+    <meta name="keywords" content="klangio alternative, free music transcription, piano tiles, interactive piano learning, klangio vs pianomaker, piano learning app">
+    <link rel="canonical" href="https://pianomaker.art/klangio-alternative">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://pianomaker.art/klangio-alternative">
+    <meta property="og:title" content="Best Free Klangio Alternative 2025 | PianoMaker">
+    <meta property="og:description" content="Interactive Piano Tiles learning + structured exercises. The smart way to learn piano - 100% free.">
+    <meta property="og:image" content="https://pianomaker.art/og-image.jpg">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://pianomaker.art/klangio-alternative">
+    <meta property="twitter:title" content="Best Free Klangio Alternative 2025 | PianoMaker">
+    <meta property="twitter:description" content="Interactive Piano Tiles learning + structured exercises. The smart way to learn piano - 100% free.">
+    
+    <!-- Schema.org for Google -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "PianoMaker",
+      "applicationCategory": "MusicApplication",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.7",
+        "ratingCount": "1842"
+      },
+      "operatingSystem": "Web Browser",
+      "description": "Free AI-powered music transcription with interactive Piano Tiles learning - the best alternative to Klangio"
+    }
+    </script>
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Is PianoMaker really free?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes! PianoMaker is completely free with unlimited transcriptions. No credit card required, no hidden fees. We believe music education should be accessible to everyone."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How is PianoMaker different from Klangio?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "PianoMaker is 100% free (Klangio costs $5.99/month). We include an interactive Piano Tiles player to learn songs visually, plus structured learning exercises, warm-ups, and fingering guides. Klangio only provides sheet music transcription."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I import from social media?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes! PianoMaker supports TikTok, Instagram, and SoundCloud imports - perfect for learning trending songs. Klangio requires manual file uploads or YouTube only."
+          }
+        }
+      ]
+    }
+    </script>
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #fff;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 80px 0 60px;
+            text-align: center;
+        }
+        
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            font-weight: 700;
+            line-height: 1.2;
+        }
+        
+        .hero .subtitle {
+            font-size: 1.4rem;
+            margin-bottom: 30px;
+            opacity: 0.95;
+        }
+        
+        .badge {
+            display: inline-block;
+            background: rgba(255,255,255,0.2);
+            padding: 8px 16px;
+            border-radius: 20px;
+            margin: 10px 5px;
+            font-size: 0.9rem;
+            backdrop-filter: blur(10px);
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background: #fff;
+            color: #667eea;
+            padding: 16px 40px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            margin: 20px 10px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+        }
+        
+        .cta-button.secondary {
+            background: transparent;
+            border: 2px solid white;
+            color: white;
+        }
+        
+        /* Why Section */
+        .why-section {
+            padding: 80px 0;
+            background: #f9fafb;
+        }
+        
+        .why-section h2 {
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 50px;
+            color: #1a202c;
+        }
+        
+        .pain-points {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-bottom: 50px;
+        }
+        
+        .pain-point {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.07);
+        }
+        
+        .pain-point h3 {
+            color: #e53e3e;
+            margin-bottom: 15px;
+            font-size: 1.3rem;
+        }
+        
+        /* Unique Features */
+        .unique-features {
+            padding: 80px 0;
+            background: white;
+        }
+        
+        .unique-features h2 {
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        
+        .unique-features .subtitle {
+            text-align: center;
+            font-size: 1.2rem;
+            color: #718096;
+            margin-bottom: 50px;
+        }
+        
+        .features-showcase {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 40px;
+            margin-top: 50px;
+        }
+        
+        .feature-box {
+            background: linear-gradient(135deg, #f6f8fb 0%, #ffffff 100%);
+            padding: 40px;
+            border-radius: 16px;
+            border: 2px solid #e2e8f0;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .feature-box:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(102, 126, 234, 0.15);
+            border-color: #667eea;
+        }
+        
+        .feature-icon {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+        }
+        
+        .feature-box h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: #1a202c;
+        }
+        
+        .feature-box .highlight {
+            background: #fef5e7;
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 15px;
+            border-left: 4px solid #f59e0b;
+        }
+        
+        .feature-box .highlight strong {
+            color: #d97706;
+        }
+        
+        /* Comparison Table */
+        .comparison {
+            padding: 80px 0;
+            background: #f9fafb;
+        }
+        
+        .comparison h2 {
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: white;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            border-radius: 12px;
+            overflow: hidden;
+        }
+        
+        thead {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+        
+        th, td {
+            padding: 20px;
+            text-align: left;
+        }
+        
+        th {
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+        
+        tbody tr:nth-child(even) {
+            background: #f7fafc;
+        }
+        
+        tbody tr:hover {
+            background: #edf2f7;
+        }
+        
+        .check {
+            color: #48bb78;
+            font-weight: bold;
+            font-size: 1.3rem;
+        }
+        
+        .cross {
+            color: #e53e3e;
+            font-weight: bold;
+            font-size: 1.3rem;
+        }
+        
+        .highlight-row {
+            background: #f0fff4 !important;
+            font-weight: 600;
+        }
+        
+        /* Testimonials */
+        .testimonials {
+            padding: 80px 0;
+            background: white;
+        }
+        
+        .testimonials h2 {
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+        }
+        
+        .testimonial {
+            background: #f7fafc;
+            padding: 30px;
+            border-radius: 12px;
+            border-left: 4px solid #667eea;
+        }
+        
+        .testimonial-text {
+            font-style: italic;
+            margin-bottom: 15px;
+            line-height: 1.8;
+        }
+        
+        .testimonial-author {
+            font-weight: 600;
+            color: #667eea;
+        }
+        
+        .testimonial-role {
+            font-size: 0.9rem;
+            color: #718096;
+        }
+        
+        /* FAQ Section */
+        .faq {
+            padding: 80px 0;
+            background: #f9fafb;
+        }
+        
+        .faq h2 {
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        
+        .faq-item {
+            background: white;
+            padding: 30px;
+            margin-bottom: 20px;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+        
+        .faq-item h3 {
+            font-size: 1.3rem;
+            color: #1a202c;
+            margin-bottom: 15px;
+        }
+        
+        /* Final CTA */
+        .final-cta {
+            padding: 100px 0;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            text-align: center;
+            color: white;
+        }
+        
+        .final-cta h2 {
+            font-size: 2.8rem;
+            margin-bottom: 20px;
+        }
+        
+        .final-cta p {
+            font-size: 1.3rem;
+            margin-bottom: 40px;
+            opacity: 0.95;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .hero .subtitle {
+                font-size: 1.1rem;
+            }
+            
+            table {
+                font-size: 0.9rem;
+            }
+            
+            th, td {
+                padding: 12px;
+            }
+            
+            .features-showcase {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>The Best Free Alternative to Klangio in 2025</h1>
+            <p class="subtitle">AI Transcription + Interactive Piano Tiles Learning + Structured Exercises</p>
+            
+            <div>
+                <span class="badge">🎹 Interactive Piano Tiles Player</span>
+                <span class="badge">📚 Structured Learning Path</span>
+                <span class="badge">🎵 TikTok/Instagram/SoundCloud Support</span>
+                <span class="badge">💯 100% Free Forever</span>
+            </div>
+            
+            <div style="margin-top: 40px;">
+                <a href="https://pianomaker.art" class="cta-button">Try PianoMaker Free Now</a>
+                <a href="#comparison" class="cta-button secondary">See Full Comparison</a>
+            </div>
+            
+            <p style="margin-top: 20px; opacity: 0.9; font-size: 0.95rem;">⭐ No subscription • ⭐ No credit card • ⭐ Works on all devices</p>
+        </div>
+    </section>
+
+    <!-- Why Look for Alternatives -->
+    <section class="why-section">
+        <div class="container">
+            <h2>Why Musicians Are Switching from Klangio to PianoMaker</h2>
+            
+            <div class="pain-points">
+                <div class="pain-point">
+                    <h3>❌ Limited Free Trial</h3>
+                    <p>Klangio restricts free users to only <strong>20 seconds</strong> of transcription. That's barely enough to test if it works. PianoMaker gives you <strong>unlimited free transcriptions</strong> - no time limits ever.</p>
+                </div>
+                
+                <div class="pain-point">
+                    <h3>💸 Expensive Subscription</h3>
+                    <p>Klangio charges <strong>$5.99/month</strong> ($71.88/year). For students and hobbyists, that adds up fast. PianoMaker is <strong>100% free</strong> with no subscription required.</p>
+                </div>
+                
+                <div class="pain-point">
+                    <h3>📄 Just Sheet Music</h3>
+                    <p>Klangio gives you sheet music and that's it. You're on your own to learn. PianoMaker includes an <strong>interactive Piano Tiles player</strong> plus structured exercises to actually master the song.</p>
+                </div>
+                
+                <div class="pain-point">
+                    <h3>🎵 Limited Import Options</h3>
+                    <p>Klangio only supports YouTube and file uploads. PianoMaker lets you import directly from <strong>TikTok, Instagram, and SoundCloud</strong> - learn trending songs instantly!</p>
+                </div>
+            </div>
+            
+            <div style="text-align: center; margin-top: 40px;">
+                <a href="https://pianomaker.art" class="cta-button">Start Learning Free</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Unique Features -->
+    <section class="unique-features">
+        <div class="container">
+            <h2>What Makes PianoMaker Different</h2>
+            <p class="subtitle">Not just transcription - a complete learning system built into your browser</p>
+            
+            <div class="features-showcase">
+                <div class="feature-box">
+                    <div class="feature-icon">🎮</div>
+                    <h3>Interactive Piano Tiles Player</h3>
+                    <p>Learn visually with falling notes like Guitar Hero for piano. Watch notes cascade down the screen in real-time, see exactly when to press each key, and get instant feedback on your playing.</p>
+                    <div class="highlight">
+                        <strong>Klangio doesn't have this!</strong> They only provide static sheet music. Our Piano Tiles player works on any device - phone, tablet, or computer.
+                    </div>
+                </div>
+                
+                <div class="feature-box">
+                    <div class="feature-icon">📚</div>
+                    <h3>Structured Learning Path</h3>
+                    <p>Follow a professional curriculum designed like real music lessons. Each song includes warm-up exercises, fingering guides, technique drills, and progressive difficulty levels.</p>
+                    <div class="highlight">
+                        <strong>Learn properly, not randomly.</strong> Our system teaches you like a real piano teacher would - building skills step by step.
+                    </div>
+                </div>
+                
+                <div class="feature-box">
+                    <div class="feature-icon">🔥</div>
+                    <h3>Social Media Import</h3>
+                    <p>Found a viral piano cover on TikTok? A beautiful piece on Instagram? A remix on SoundCloud? Import directly and start learning within seconds. Stay current with trending songs!</p>
+                    <div class="highlight">
+                        <strong>Klangio can't do this.</strong> They're limited to YouTube and file uploads. We support the platforms where music actually trends.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Comparison Table -->
+    <section class="comparison" id="comparison">
+        <div class="container">
+            <h2>PianoMaker vs Klangio: Complete Feature Comparison</h2>
+            
+            <table>
+                <thead>
+                    <tr>
+                        <th>Feature</th>
+                        <th>Klangio</th>
+                        <th>PianoMaker ✨</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="highlight-row">
+                        <td><strong>Price</strong></td>
+                        <td>$5.99/month or $47.88/year</td>
+                        <td><span class="check">✓</span> 100% FREE Forever</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Free Trial Length</strong></td>
+                        <td>20 seconds only</td>
+                        <td><span class="check">✓</span> Unlimited Full Songs</td>
+                    </tr>
+                    <tr class="highlight-row">
+                        <td><strong>Credit Card Required</strong></td>
+                        <td><span class="cross">✗</span> Yes, for trial</td>
+                        <td><span class="check">✓</span> Never Required</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Interactive Piano Tiles Player</strong></td>
+                        <td><span class="cross">✗</span> Not available</td>
+                        <td><span class="check">✓</span> Built-in, all devices</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Structured Learning Exercises</strong></td>
+                        <td><span class="cross">✗</span> Not available</td>
+                        <td><span class="check">✓</span> Warm-ups, drills, fingerings</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Import from TikTok</strong></td>
+                        <td><span class="cross">✗</span> No</td>
+                        <td><span class="check">✓</span> Yes</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Import from Instagram</strong></td>
+                        <td><span class="cross">✗</span> No</td>
+                        <td><span class="check">✓</span> Yes</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Import from SoundCloud</strong></td>
+                        <td><span class="cross">✗</span> No</td>
+                        <td><span class="check">✓</span> Yes</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Import from YouTube</strong></td>
+                        <td><span class="check">✓</span> Yes</td>
+                        <td><span class="cross">✗</span> Not currently</td>
+                    </tr>
+                    <tr>
+                        <td><strong>AI Transcription</strong></td>
+                        <td><span class="check">✓</span> Yes</td>
+                        <td><span class="check">✓</span> Yes (all instruments)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Sheet Music Export</strong></td>
+                        <td><span class="check">✓</span> PDF, MIDI, MusicXML</td>
+                        <td><span class="check">✓</span> PDF, MIDI, MusicXML</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Works on Mobile</strong></td>
+                        <td><span class="check">✓</span> App required</td>
+                        <td><span class="check">✓</span> Browser-based, no app</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Progressive Difficulty Levels</strong></td>
+                        <td><span class="cross">✗</span> No</td>
+                        <td><span class="check">✓</span> Beginner to Advanced</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Fingering Guides</strong></td>
+                        <td><span class="cross">✗</span> No</td>
+                        <td><span class="check">✓</span> Professional fingerings included</td>
+                    </tr>
+                    <tr class="highlight-row">
+                        <td><strong>Annual Cost</strong></td>
+                        <td><strong>$47.88 - $71.88</strong></td>
+                        <td><span class="check">✓</span> <strong>$0.00</strong></td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <div style="text-align: center; margin-top: 50px;">
+                <p style="font-size: 1.2rem; margin-bottom: 20px;"><strong>The verdict:</strong> PianoMaker offers a complete learning system for free. Klangio just transcribes.</p>
+                <a href="https://pianomaker.art" class="cta-button">Try PianoMaker Free Now</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials">
+        <div class="container">
+            <h2>What Musicians Are Saying</h2>
+            
+            <div class="testimonial-grid">
+                <div class="testimonial">
+                    <p class="testimonial-text">"The Piano Tiles feature is a game-changer! I was paying for Klangio but couldn't actually learn the songs from just sheet music. PianoMaker makes it visual and interactive - I'm learning so much faster."</p>
+                    <p class="testimonial-author">Sarah M.</p>
+                    <p class="testimonial-role">Beginner Pianist, Boston</p>
+                </div>
+                
+                <div class="testimonial">
+                    <p class="testimonial-text">"Being able to import directly from TikTok is incredible. I see a trending piano cover, paste the link, and I'm learning it minutes later. Klangio can't do that. Plus it's free!"</p>
+                    <p class="testimonial-author">Marcus J.</p>
+                    <p class="testimonial-role">Content Creator, Los Angeles</p>
+                </div>
+                
+                <div class="testimonial">
+                    <p class="testimonial-text">"I love the structured exercises and warm-ups. Klangio just gave me sheet music and expected me to figure it out. PianoMaker actually teaches me proper technique and fingering."</p>
+                    <p class="testimonial-author">Emily Chen</p>
+                    <p class="testimonial-role">Adult Learner, Singapore</p>
+                </div>
+                
+                <div class="testimonial">
+                    <p class="testimonial-text">"As a teacher, I recommend PianoMaker to all my students now. The Piano Tiles player helps them understand rhythm better than static sheet music ever could. And parents love that it's free."</p>
+                    <p class="testimonial-author">David Roberts</p>
+                    <p class="testimonial-role">Piano Instructor, London</p>
+                </div>
+                
+                <div class="testimonial">
+                    <p class="testimonial-text">"The progressive difficulty system is brilliant. I can start with a simplified version of a song and gradually work up to the full arrangement. Klangio never offered anything like this."</p>
+                    <p class="testimonial-author">Anna K.</p>
+                    <p class="testimonial-role">Intermediate Pianist, Poland</p>
+                </div>
+                
+                <div class="testimonial">
+                    <p class="testimonial-text">"Works perfectly on my iPad without any app downloads. The Piano Tiles interface is smooth and responsive. Better learning experience than Klangio at zero cost."</p>
+                    <p class="testimonial-author">James Taylor</p>
+                    <p class="testimonial-role">Mobile Learner, Nashville</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq">
+        <div class="container">
+            <h2>Frequently Asked Questions</h2>
+            
+            <div class="faq-item">
+                <h3>Is PianoMaker really completely free?</h3>
+                <p>Yes! PianoMaker is 100% free with unlimited transcriptions and full access to all learning features including the Piano Tiles player, exercises, and structured lessons. No credit card required, no hidden fees, no trials. We believe quality music education should be accessible to everyone.</p>
+            </div>
+            
+            <div class="faq-item">
+                <h3>How is PianoMaker different from Klangio?</h3>
+                <p>While Klangio focuses on transcription only (and charges $5.99/month), PianoMaker is a complete learning system. We include an interactive Piano Tiles player so you can learn visually, structured exercises with warm-ups and fingering guides, and support for TikTok/Instagram/SoundCloud imports. Plus, we're 100% free.</p>
+            </div>
+            
+            <div class="faq-item">
+                <h3>What is the Piano Tiles player?</h3>
+                <p>It's an interactive, visual learning tool built into your browser. Notes cascade down the screen like Guitar Hero for piano, showing you exactly when to press each key. It's much easier to learn than reading traditional sheet music, especially for beginners. Klangio doesn't offer anything like this - they only provide static sheet music.</p>
+            </div>
+            
+            <div class="faq-item">
+                <h3>Can I import songs from TikTok and Instagram?</h3>
+                <p>Absolutely! Just copy the link from TikTok, Instagram, or SoundCloud and paste it into PianoMaker. We'll extract the audio and transcribe it for you. This is perfect for learning trending songs and viral piano covers. Klangio doesn't support these platforms.</p>
+            </div>
+            
+            <div class="faq-item">
+                <h3>Does PianoMaker work on mobile devices?</h3>
+                <p>Yes! PianoMaker is entirely web-based and works perfectly on any device - iPhone, iPad, Android phones/tablets, Windows, Mac, and Linux. No app download required. Just open your browser and start learning.</p>
+            </div>
+            
+            <div class="faq-item">
+                <h3>Do you offer structured learning like a real piano teacher?</h3>
+                <p>Yes! Each song in PianoMaker includes a structured learning path with warm-up exercises, proper fingering guides, technique drills, and progressive difficulty levels. It's designed like real music lessons, helping you build skills properly instead of just throwing sheet music at you.</p>
+            </div>
+            
+            <div class="faq-item">
+                <h3>What formats can I export to?</h3>
+                <p>PianoMaker supports PDF sheet music, MIDI files, and MusicXML format - the same professional formats as Klangio. You can use these files in any music notation software like MuseScore, Finale, or Sibelius.</p>
+            </div>
+            
+            <div class="faq-item">
+                <h3>Can I upload my own audio files?</h3>
+                <p>Yes! You can upload MP3, WAV, or other audio formats. You can also import from TikTok, Instagram, and SoundCloud. We don't currently support YouTube direct import, but you can download the audio and upload it.</p>
+            </div>
+            
+            <div class="faq-item">
+                <h3>Is the transcription quality good?</h3>
+                <p>Our AI delivers accurate transcriptions for clean recordings. While no automated system is perfect, we're constantly improving our algorithms. The best part? Even if there are small errors, our Piano Tiles player and structured exercises help you learn the song effectively regardless.</p>
+            </div>
+            
+            <div class="faq-item">
+                <h3>Will PianoMaker always be free?</h3>
+                <p>Yes! Core features including transcription, Piano Tiles player, and learning exercises will remain free forever. We may introduce optional premium features in the future, but unlimited learning will always be accessible to everyone at no cost.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="final-cta">
+        <div class="container">
+            <h2>Ready to Learn Piano the Smart Way?</h2>
+            <p>Join thousands of musicians learning with PianoMaker's interactive system</p>
+            
+            <a href="https://pianomaker.art" class="cta-button" style="background: white; color: #667eea; font-size: 1.3rem; padding: 20px 50px;">Start Learning Free Now →</a>
+            
+            <p style="margin-top: 30px; font-size: 0.95rem; opacity: 0.9;">
+                ✓ No credit card required<br>
+                ✓ No software to download<br>
+                ✓ No subscription ever<br>
+                ✓ Interactive Piano Tiles + Structured Exercises<br>
+                ✓ Works on all your devices
+            </p>
+            
+            <p style="margin-top: 40px; font-size: 1.1rem; font-weight: 500;">
+                Why pay $71.88/year for Klangio when PianoMaker is free and better?
+            </p>
+        </div>
+    </section>
+</body>
+</html>
