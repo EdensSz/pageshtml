@@ -5,15 +5,47 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
   <title>{{SONG_NAME}} Piano Tutorial - Learn to Play FREE | PianoMaker</title>
-  <meta name="description" content="Learn {{SONG_NAME}} by {{ARTIST_NAME}} on piano for FREE. Watch falling tiles, press the keys - it's that simple. No sheet music needed. Start now!">
+  <meta name="description" content="Learn {{SONG_NAME}} by {{ARTIST_NAME}} on piano for FREE with PianoMaker. Watch falling tiles, press the keys - it's that simple. No sheet music needed. Start now!">
+  <meta name="keywords" content="pianomaker, piano maker, {{SONG_NAME}} piano, {{SONG_NAME}} piano tutorial, learn {{SONG_NAME}} piano, piano tiles, free piano lessons">
   
   <link rel="canonical" href="https://song.pianomaker.art/{{SONG_SLUG}}">
   
   <meta property="og:type" content="article">
-  <meta property="og:title" content="{{SONG_NAME}} Piano Tutorial - FREE">
-  <meta property="og:description" content="Learn {{SONG_NAME}} on piano for free with falling tiles. No experience needed!">
+  <meta property="og:title" content="{{SONG_NAME}} Piano Tutorial - FREE | PianoMaker">
+  <meta property="og:description" content="Learn {{SONG_NAME}} on piano for free with falling tiles on PianoMaker. No experience needed!">
   <meta property="og:url" content="https://song.pianomaker.art/{{SONG_SLUG}}">
   <meta property="og:image" content="https://song.pianomaker.art/og/{{SONG_SLUG}}.jpg">
+  
+  <!-- Schema.org structured data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    "name": "How to Play {{SONG_NAME}} on Piano",
+    "description": "Learn {{SONG_NAME}} by {{ARTIST_NAME}} on piano using PianoMaker's interactive piano tiles system",
+    "image": "https://song.pianomaker.art/og/{{SONG_SLUG}}.jpg",
+    "tool": [{
+      "@type": "HowToTool",
+      "name": "PianoMaker"
+    }, {
+      "@type": "HowToTool",
+      "name": "Piano or Keyboard"
+    }],
+    "step": [{
+      "@type": "HowToStep",
+      "name": "Open PianoMaker",
+      "text": "Click Start Playing for FREE to open PianoMaker in your browser"
+    }, {
+      "@type": "HowToStep",
+      "name": "Watch falling tiles",
+      "text": "Watch the colored tiles fall down your screen in rhythm with {{SONG_NAME}}"
+    }, {
+      "@type": "HowToStep",
+      "name": "Play the keys",
+      "text": "Press the matching piano keys as tiles reach the bottom line"
+    }]
+  }
+  </script>
   
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -44,6 +76,117 @@
       background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulance type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.03'/%3E%3C/svg%3E");
       pointer-events: none;
       z-index: 1;
+    }
+    
+    /* Navigation Bar */
+    .navbar {
+      background: rgba(20, 20, 30, 0.95);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      padding: 16px 0;
+    }
+    
+    .nav-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    
+    .nav-logo {
+      font-size: 1.5rem;
+      font-weight: 700;
+      background: linear-gradient(135deg, #8b5cf6 0%, #3b82f6 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      text-decoration: none;
+      transition: opacity 0.3s ease;
+    }
+    
+    .nav-logo:hover {
+      opacity: 0.8;
+    }
+    
+    .nav-links {
+      display: flex;
+      gap: 32px;
+      align-items: center;
+    }
+    
+    .nav-links a {
+      color: #e5e7eb;
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 1rem;
+      transition: color 0.3s ease;
+      position: relative;
+    }
+    
+    .nav-links a::after {
+      content: '';
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: linear-gradient(135deg, #8b5cf6 0%, #3b82f6 100%);
+      transition: width 0.3s ease;
+    }
+    
+    .nav-links a:hover {
+      color: #ffffff;
+    }
+    
+    .nav-links a:hover::after {
+      width: 100%;
+    }
+    
+    /* Mobile menu button */
+    .mobile-menu-btn {
+      display: none;
+      background: none;
+      border: none;
+      color: white;
+      font-size: 1.5rem;
+      cursor: pointer;
+      padding: 8px;
+    }
+    
+    /* Mobile menu */
+    .mobile-nav {
+      display: none;
+      background: rgba(20, 20, 30, 0.98);
+      backdrop-filter: blur(10px);
+      position: fixed;
+      top: 64px;
+      left: 0;
+      right: 0;
+      padding: 20px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      z-index: 99;
+    }
+    
+    .mobile-nav.active {
+      display: block;
+    }
+    
+    .mobile-nav a {
+      display: block;
+      color: #e5e7eb;
+      text-decoration: none;
+      padding: 12px 0;
+      font-weight: 500;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    }
+    
+    .mobile-nav a:hover {
+      color: #8b5cf6;
     }
     
     .container {
@@ -284,6 +427,19 @@
       color: #10b981;
     }
     
+    /* PianoMaker branding section */
+    .pianomaker-section {
+      background: linear-gradient(135deg, rgba(139, 92, 246, 0.05) 0%, rgba(59, 130, 246, 0.05) 100%);
+      border: 1px solid rgba(139, 92, 246, 0.2);
+      border-radius: 16px;
+      padding: 28px;
+      margin: 32px 0;
+    }
+    
+    .pianomaker-section h2 {
+      margin-top: 0;
+    }
+    
     footer {
       text-align: center;
       padding: 35px 20px;
@@ -304,6 +460,14 @@
     }
     
     @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+      }
+      
+      .mobile-menu-btn {
+        display: block;
+      }
+      
       .container {
         padding: 20px 16px;
       }
@@ -320,6 +484,29 @@
 </head>
 <body>
   <div class="noise"></div>
+  
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="https://pianomaker.art" class="nav-logo">PianoMaker</a>
+      
+      <div class="nav-links">
+        <a href="https://pianomaker.art">Home</a>
+        <a href="https://song.pianomaker.art/blog">Blog</a>
+        <a href="https://song.pianomaker.art/repertory">Repertory</a>
+      </div>
+      
+      <button class="mobile-menu-btn" onclick="toggleMobileMenu()">☰</button>
+    </div>
+  </nav>
+  
+  <!-- Mobile Navigation -->
+  <div class="mobile-nav" id="mobileNav">
+    <a href="https://pianomaker.art">Home</a>
+    <a href="https://song.pianomaker.art/blog">Blog</a>
+    <a href="https://song.pianomaker.art/repertory">Repertory</a>
+  </div>
+  
   <div class="container">
     <div class="hero">
       <div class="free-badge">✨ 100% FREE - NO CREDIT CARD</div>
@@ -367,6 +554,12 @@
         </div>
       </div>
 
+      <div class="pianomaker-section">
+        <h2>🎹 About PianoMaker (Piano Maker)</h2>
+        <p><strong>PianoMaker</strong> (also known as <strong>Piano Maker</strong>) is the world's most intuitive piano learning platform. Using AI-powered music analysis and interactive piano tiles, PianoMaker transforms any song into an easy-to-follow visual learning experience.</p>
+        <p>Whether you search for "pianomaker" or "piano maker", you'll find our free platform that has helped thousands learn piano without traditional sheet music. Our piano tiles method makes learning {{SONG_NAME}} and other songs fun, visual, and accessible to everyone.</p>
+      </div>
+
       <h2>🤖 How Our AI Helps You</h2>
       <p>Our algorithm analyzed <strong>{{SONG_NAME}}</strong> and converted it into a piano-friendly arrangement. The AI:</p>
       <ul>
@@ -401,7 +594,7 @@
       <p>Most people can play a recognizable version of <strong>{{SONG_NAME}}</strong> within 1-2 weeks with 15-20 minutes of daily practice using our piano tiles system.</p>
 
       <h3>Is {{SONG_NAME}} really free on PianoMaker?</h3>
-      <p>Yes! <strong>{{SONG_NAME}}</strong> is 100% free. No credit card, no account required. Click the button and start playing immediately.</p>
+      <p>Yes! <strong>{{SONG_NAME}}</strong> is 100% free on Piano Maker. No credit card, no account required. Click the button and start playing immediately.</p>
 
       <h3>What do I need to play {{SONG_NAME}}?</h3>
       <p>Any piano or keyboard works. Even a small 61-key keyboard is perfect for learning <strong>{{SONG_NAME}}</strong> with our system.</p>
@@ -417,7 +610,29 @@
   </div>
 
   <footer>
-    <p>&copy; 2024 PianoMaker. <a href="https://pianomaker.art">Home</a> • <a href="https://pianomaker.art/library">Library</a></p>
+    <p>&copy; 2024 PianoMaker. Learn piano with interactive piano tiles.</p>
+    <p style="margin-top: 8px;">
+      <a href="https://pianomaker.art">Home</a> • 
+      <a href="https://song.pianomaker.art/blog">Blog</a> • 
+      <a href="https://song.pianomaker.art/repertory">Repertory</a>
+    </p>
   </footer>
+
+  <script>
+    function toggleMobileMenu() {
+      const mobileNav = document.getElementById('mobileNav');
+      mobileNav.classList.toggle('active');
+    }
+    
+    // Close mobile menu when clicking outside
+    document.addEventListener('click', function(event) {
+      const mobileNav = document.getElementById('mobileNav');
+      const mobileBtn = document.querySelector('.mobile-menu-btn');
+      
+      if (!mobileNav.contains(event.target) && !mobileBtn.contains(event.target)) {
+        mobileNav.classList.remove('active');
+      }
+    });
+  </script>
 </body>
 </html>
