@@ -37,10 +37,13 @@ def scan_blog_posts(post_dir='docs/blog/post'):
     for filename in os.listdir(post_dir):
         if filename.endswith('.html') and filename != 'index.html':
             filepath = os.path.join(post_dir, filename)
-            metadata = extract_metadata_from_html(filepath)
-            metadata['file'] = filename
-            posts.append(metadata)
-            print(f"✓ Trouvé: {filename}")
+            try:
+                metadata = extract_metadata_from_html(filepath)
+                metadata['file'] = filename
+                posts.append(metadata)
+                print(f"✓ Trouvé: {filename}")
+            except Exception as e:
+                print(f"⚠️  Erreur lors de la lecture de {filename}: {e}")
     
     # Trier par date décroissante
     posts.sort(key=lambda x: x['date'], reverse=True)
@@ -48,12 +51,18 @@ def scan_blog_posts(post_dir='docs/blog/post'):
 
 def generate_posts_js(posts):
     """Génère le code JavaScript pour le tableau posts"""
+    if not posts:
+        return "        const posts = [];"
+    
     js_code = "        const posts = [\n"
     
-    for post in posts:
-        # Échapper les guillemets dans le contenu
-        title = post['title'].replace('"', '\\"')
-        excerpt = post['excerpt'].replace('"', '\\"')
+    for i, post in enumerate(posts):
+        # Échapper les guillemets et backslashes dans le contenu
+        title = post['title'].replace('\\', '\\\\').replace('"', '\\"').replace('\n', ' ')
+        excerpt = post['excerpt'].replace('\\', '\\\\').replace('"', '\\"').replace('\n', ' ')
+        
+        # Pas de virgule après le dernier élément
+        comma = "," if i < len(posts) - 1 else ""
         
         js_code += f"""            {{
                 title: "{title}",
@@ -61,7 +70,7 @@ def generate_posts_js(posts):
                 date: "{post['date']}",
                 excerpt: "{excerpt}",
                 icon: "{post['icon']}"
-            }},
+            }}{comma}
 """
     
     js_code += "        ];"
@@ -69,31 +78,52 @@ def generate_posts_js(posts):
 
 def update_blog_index(index_path='docs/blog/index.html', posts_js=''):
     """Met à jour l'index.html avec la nouvelle liste de posts"""
-    with open(index_path, 'r', encoding='utf-8') as f:
-        content = f.read()
+    if not os.path.exists(index_path):
+        print(f"⚠️  Fichier {index_path} introuvable")
+        return False
     
-    # Remplacer la section const posts = [...];
-    pattern = r'const posts = \[.*?\];'
-    updated_content = re.sub(pattern, posts_js, content, flags=re.DOTALL)
-    
-    with open(index_path, 'w', encoding='utf-8') as f:
-        f.write(updated_content)
+    try:
+        with open(index_path, 'r', encoding='utf-8') as f:
+            content = f.read()
+        
+        # Remplacer la section const posts = [...];
+        pattern = r'const posts = \[.*?\];'
+        
+        # Vérifier que le pattern existe
+        if not re.search(pattern, content, flags=re.DOTALL):
+            print("⚠️  Pattern 'const posts = [...]' non trouvé dans index.html")
+            return False
+        
+        updated_content = re.sub(pattern, posts_js, content, flags=re.DOTALL)
+        
+        with open(index_path, 'w', encoding='utf-8') as f:
+            f.write(updated_content)
+        
+        return True
+    except Exception as e:
+        print(f"⚠️  Erreur lors de la mise à jour: {e}")
+        return False
 
 # Exécution principale
-print("🚀 Mise à jour de l'index du blog...\n")
+if __name__ == "__main__":
+    print("🚀 Mise à jour de l'index du blog...\n")
 
-posts = scan_blog_posts('docs/blog/post')
-print(f"\n✅ {len(posts)} articles trouvés\n")
+    posts = scan_blog_posts('docs/blog/post')
+    print(f"\n✅ {len(posts)} article(s) trouvé(s)\n")
 
-if posts:
-    posts_js = generate_posts_js(posts)
-    update_blog_index('docs/blog/index.html', posts_js)
-    print("✅ Index mis à jour: docs/blog/index.html\n")
-    
-    print("📝 Articles indexés:")
-    for post in posts:
-        print(f"   - {post['title']} ({post['date']})")
-else:
-    print("⚠️  Aucun article trouvé dans docs/blog/post/")
+    if posts:
+        posts_js = generate_posts_js(posts)
+        
+        if update_blog_index('docs/blog/index.html', posts_js):
+            print("✅ Index mis à jour: docs/blog/index.html\n")
+            
+            print("📝 Articles indexés:")
+            for post in posts:
+                print(f"   - {post['title'][:60]}... ({post['date']})")
+        else:
+            print("❌ Échec de la mise à jour de l'index")
+    else:
+        print("⚠️  Aucun article trouvé dans docs/blog/post/")
+        print("💡 Assurez-vous que vos fichiers .html sont bien dans ce dossier")
 
-print("\n💡 Mise à jour terminée!")
+    print("\n💡 Commitez et pushez sur GitHub pour voir les changements!")
