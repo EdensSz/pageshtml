@@ -23,10 +23,10 @@ def extract_metadata_from_html(filepath):
         'title': title,
         'excerpt': excerpt,
         'date': date,
-        'icon': '🎹'  # Icône par défaut
+        'icon': '🎹'
     }
 
-def scan_blog_posts(post_dir='blog/post'):
+def scan_blog_posts(post_dir='docs/blog/post'):
     """Scanne tous les articles HTML dans le dossier post/"""
     posts = []
     
@@ -51,11 +51,15 @@ def generate_posts_js(posts):
     js_code = "        const posts = [\n"
     
     for post in posts:
+        # Échapper les guillemets dans le contenu
+        title = post['title'].replace('"', '\\"')
+        excerpt = post['excerpt'].replace('"', '\\"')
+        
         js_code += f"""            {{
-                title: "{post['title']}",
+                title: "{title}",
                 file: "{post['file']}",
                 date: "{post['date']}",
-                excerpt: "{post['excerpt']}",
+                excerpt: "{excerpt}",
                 icon: "{post['icon']}"
             }},
 """
@@ -63,7 +67,7 @@ def generate_posts_js(posts):
     js_code += "        ];"
     return js_code
 
-def update_blog_index(index_path='blog/index.html', posts_js=''):
+def update_blog_index(index_path='docs/blog/index.html', posts_js=''):
     """Met à jour l'index.html avec la nouvelle liste de posts"""
     with open(index_path, 'r', encoding='utf-8') as f:
         content = f.read()
@@ -84,12 +88,12 @@ print(f"\n✅ {len(posts)} articles trouvés\n")
 if posts:
     posts_js = generate_posts_js(posts)
     update_blog_index('docs/blog/index.html', posts_js)
-    print("✅ Index mis à jour: blog/index.html\n")
+    print("✅ Index mis à jour: docs/blog/index.html\n")
     
     print("📝 Articles indexés:")
     for post in posts:
         print(f"   - {post['title']} ({post['date']})")
 else:
-    print("⚠️  Aucun article trouvé dans blog/post/")
+    print("⚠️  Aucun article trouvé dans docs/blog/post/")
 
-print("\n💡 Commitez et pushez sur GitHub pour voir les changements!")
+print("\n💡 Mise à jour terminée!")
