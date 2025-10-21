@@ -78,12 +78,12 @@ def update_blog_index(index_path='blog/index.html', posts_js=''):
 # Exécution principale
 print("🚀 Mise à jour de l'index du blog...\n")
 
-posts = scan_blog_posts('blog/post')
+posts = scan_blog_posts('docs/blog/post')
 print(f"\n✅ {len(posts)} articles trouvés\n")
 
 if posts:
     posts_js = generate_posts_js(posts)
-    update_blog_index('blog/index.html', posts_js)
+    update_blog_index('docs/blog/index.html', posts_js)
     print("✅ Index mis à jour: blog/index.html\n")
     
     print("📝 Articles indexés:")
