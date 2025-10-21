@@ -68,7 +68,7 @@ else:
     print("⚠️  songs.csv introuvable\n")
 
 # Scanner les pages blog
-blog_pages = scan_blog_pages('blog')
+blog_pages = scan_blog_pages('docs/blog')
 print(f"\n✅ {len(blog_pages)} pages blog trouvées\n")
 
 # Générer le sitemap
