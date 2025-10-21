@@ -17,11 +17,58 @@
             color: #2d3748;
         }
         
-        .hero {
+        /* Navigation Bar */
+        .navbar {
+            background: white;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            padding: 15px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        
+        .navbar .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .navbar .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #667eea;
+            text-decoration: none;
+        }
+        
+        .navbar nav {
+            display: flex;
+            gap: 30px;
+            align-items: center;
+        }
+        
+        .navbar nav a {
+            color: #2d3748;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        
+        .navbar nav a:hover {
+            color: #667eea;
+        }
+        
+        .navbar .nav-cta {
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: white;
-            padding: 80px 20px;
-            text-align: center;
+            padding: 10px 25px;
+            border-radius: 25px;
+            font-weight: 600;
+        }
+        
+        .navbar .nav-cta:hover {
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
         }
         
         .container {
@@ -30,72 +77,36 @@
             padding: 0 20px;
         }
         
+        .hero {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 80px 20px;
+            text-align: center;
+        }
+        
         h1 {
-            font-size: 3em;
+            font-size: 2.8em;
             margin-bottom: 20px;
             font-weight: 800;
         }
         
         .subtitle {
-            font-size: 1.4em;
+            font-size: 1.3em;
             margin-bottom: 30px;
             opacity: 0.95;
-        }
-        
-        .badges {
-            display: flex;
-            justify-content: center;
-            gap: 15px;
-            flex-wrap: wrap;
-            margin-bottom: 30px;
-        }
-        
-        .badge {
-            background: rgba(255,255,255,0.2);
-            padding: 10px 20px;
-            border-radius: 25px;
-            font-weight: 600;
-            backdrop-filter: blur(10px);
-        }
-        
-        .cta-buttons {
-            display: flex;
-            gap: 20px;
-            justify-content: center;
-            margin-bottom: 30px;
-            flex-wrap: wrap;
-        }
-        
-        .cta-button {
-            background: white;
-            color: #667eea;
-            padding: 18px 40px;
-            border-radius: 50px;
-            text-decoration: none;
-            font-weight: 700;
-            font-size: 1.1em;
-            transition: transform 0.3s, box-shadow 0.3s;
-            display: inline-block;
-        }
-        
-        .cta-button:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
-        }
-        
-        .cta-button.secondary {
-            background: transparent;
-            color: white;
-            border: 2px solid white;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
         }
         
         .trust-line {
-            font-size: 1.1em;
+            font-size: 1.05em;
             opacity: 0.9;
+            margin-top: 20px;
         }
         
         section {
-            padding: 80px 20px;
+            padding: 60px 20px;
         }
         
         .white-bg {
@@ -107,106 +118,71 @@
         }
         
         h2 {
-            font-size: 2.5em;
-            margin-bottom: 30px;
+            font-size: 2.2em;
+            margin-bottom: 25px;
             color: #2d3748;
             text-align: center;
             font-weight: 700;
         }
         
         h3 {
-            font-size: 1.8em;
+            font-size: 1.5em;
             margin-bottom: 15px;
             color: #2d3748;
             font-weight: 600;
         }
         
         .intro-text {
-            font-size: 1.2em;
+            font-size: 1.1em;
             line-height: 1.8;
             margin-bottom: 20px;
             color: #4a5568;
         }
         
-        .features-grid {
+        .platform-overview {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-            margin-top: 40px;
-        }
-        
-        .feature-box {
-            background: white;
-            padding: 30px;
-            border-radius: 15px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-            transition: transform 0.3s;
-        }
-        
-        .feature-box:hover {
-            transform: translateY(-5px);
-        }
-        
-        .feature-emoji {
-            font-size: 3em;
-            margin-bottom: 15px;
-        }
-        
-        .problem-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 25px;
-            margin-top: 40px;
-        }
-        
-        .problem-box {
-            background: white;
-            padding: 25px;
-            border-radius: 12px;
-            border-left: 4px solid #e53e3e;
-        }
-        
-        .problem-title {
-            color: #e53e3e;
-            font-weight: 700;
-            margin-bottom: 10px;
-        }
-        
-        .solution-title {
-            color: #48bb78;
-            font-weight: 700;
-            margin-top: 15px;
-            margin-bottom: 10px;
-        }
-        
-        .unique-features {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
             gap: 40px;
-            margin-top: 50px;
+            margin-top: 40px;
         }
         
-        .unique-box {
-            background: #f9fafb;
+        .platform-card {
+            background: white;
             padding: 40px;
             border-radius: 15px;
-            border: 2px solid #e2e8f0;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
         }
         
-        .unique-emoji {
-            font-size: 4em;
+        .platform-name {
+            font-size: 2em;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+        
+        .platform-tagline {
+            color: #718096;
+            font-size: 1.1em;
             margin-bottom: 20px;
-            display: block;
+            font-style: italic;
         }
         
-        .highlight-box {
-            background: linear-gradient(135deg, #ff9a56 0%, #ff6b9d 100%);
-            color: white;
-            padding: 15px;
-            border-radius: 10px;
-            margin-top: 20px;
-            font-weight: 600;
-            text-align: center;
+        .price-tag {
+            display: inline-block;
+            padding: 8px 20px;
+            border-radius: 20px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            font-size: 1.1em;
+        }
+        
+        .price-free {
+            background: #c6f6d5;
+            color: #22543d;
+        }
+        
+        .price-paid {
+            background: #fed7d7;
+            color: #742a2a;
         }
         
         .comparison-table {
@@ -225,65 +201,125 @@
         
         .comparison-table th {
             padding: 20px;
-            font-size: 1.3em;
+            font-size: 1.2em;
             font-weight: 700;
         }
         
         .comparison-table td {
-            padding: 20px;
+            padding: 18px;
             border-bottom: 1px solid #e2e8f0;
-            font-size: 1.1em;
+            font-size: 1.05em;
+            vertical-align: top;
         }
         
-        .comparison-table tr:nth-child(even) {
+        .comparison-table tbody tr:nth-child(even) {
             background: #f9fafb;
         }
         
         .comparison-table tr.highlight {
             background: #fef3c7;
-            font-weight: 700;
+            font-weight: 600;
         }
         
         .check {
             color: #48bb78;
-            font-size: 1.5em;
+            font-size: 1.3em;
+            font-weight: 900;
         }
         
         .cross {
             color: #e53e3e;
-            font-size: 1.5em;
+            font-size: 1.3em;
+            font-weight: 900;
         }
         
-        .testimonials-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 30px;
-            margin-top: 40px;
+        .partial {
+            color: #ed8936;
+            font-size: 1.05em;
         }
         
-        .testimonial {
-            background: white;
-            padding: 30px;
-            border-radius: 15px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-            border-top: 4px solid #667eea;
-        }
-        
-        .testimonial-text {
-            font-style: italic;
-            margin-bottom: 15px;
-            color: #4a5568;
-            line-height: 1.7;
-        }
-        
-        .testimonial-author {
+        .feature-category {
+            background: #edf2f7;
             font-weight: 700;
             color: #2d3748;
         }
         
-        .testimonial-role {
-            color: #718096;
-            font-size: 0.9em;
+        .pros-cons-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+            gap: 40px;
+            margin-top: 40px;
+        }
+        
+        .pros-cons-box {
+            background: white;
+            padding: 35px;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.08);
+        }
+        
+        .pros-cons-box h3 {
+            margin-bottom: 25px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .pros-cons-box ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .pros-cons-box li {
+            padding: 12px 0;
+            border-bottom: 1px solid #e2e8f0;
+            line-height: 1.6;
+        }
+        
+        .pros-cons-box li:last-child {
+            border-bottom: none;
+        }
+        
+        .pros-box {
+            border-top: 4px solid #48bb78;
+        }
+        
+        .cons-box {
+            border-top: 4px solid #e53e3e;
+        }
+        
+        .verdict-box {
+            background: linear-gradient(135deg, #f6f8fb 0%, #ffffff 100%);
+            padding: 40px;
+            border-radius: 15px;
+            margin-top: 40px;
+            border-left: 5px solid #667eea;
+        }
+        
+        .verdict-box h3 {
+            color: #667eea;
+            margin-bottom: 20px;
+        }
+        
+        .use-case-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin-top: 30px;
+        }
+        
+        .use-case-card {
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            border-left: 4px solid #667eea;
+        }
+        
+        .use-case-card strong {
+            display: block;
+            font-size: 1.1em;
+            margin-bottom: 8px;
+            color: #2d3748;
         }
         
         .faq-container {
@@ -300,7 +336,7 @@
         }
         
         .faq-question {
-            font-size: 1.3em;
+            font-size: 1.25em;
             font-weight: 700;
             color: #667eea;
             margin-bottom: 15px;
@@ -311,36 +347,22 @@
             line-height: 1.8;
         }
         
-        .final-cta {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 80px 20px;
-            text-align: center;
+        .cta-button {
+            background: white;
+            color: #667eea;
+            padding: 16px 40px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.1em;
+            transition: transform 0.3s, box-shadow 0.3s;
+            display: inline-block;
+            margin: 10px;
         }
         
-        .benefits-list {
-            list-style: none;
-            margin: 30px auto;
-            max-width: 600px;
-            text-align: left;
-        }
-        
-        .benefits-list li {
-            padding: 12px 0;
-            font-size: 1.2em;
-        }
-        
-        .benefits-list li:before {
-            content: "✓ ";
-            color: #68d391;
-            font-weight: 900;
-            margin-right: 10px;
-        }
-        
-        .final-statement {
-            font-size: 1.3em;
-            margin-top: 30px;
-            opacity: 0.95;
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
         }
         
         @media (max-width: 768px) {
@@ -352,144 +374,81 @@
                 font-size: 1.8em;
             }
             
+            .platform-overview,
+            .pros-cons-grid,
+            .use-case-grid {
+                grid-template-columns: 1fr;
+            }
+            
             .comparison-table {
-                font-size: 0.9em;
+                font-size: 0.85em;
             }
             
             .comparison-table th,
             .comparison-table td {
-                padding: 12px;
+                padding: 10px;
             }
         }
     </style>
 </head>
 <body>
-    <!-- Hero Section -->
-    <div class="hero">
+    <!-- Navigation Bar -->
+    <div class="navbar">
         <div class="container">
-            <h1>PianoMaker vs Songscription: The Ultimate Comparison for Piano Learners</h1>
-            <p class="subtitle">Discover why PianoMaker is the smarter choice for learning piano with AI-powered transcription, Piano Tiles gameplay, and 100% FREE access</p>
-            
-            <div class="badges">
-                <span class="badge">🎹 Piano Tiles Player</span>
-                <span class="badge">📚 Structured Learning</span>
-                <span class="badge">🎵 Social Media Import</span>
-                <span class="badge">💯 100% Free Forever</span>
-            </div>
-            
-            <div class="cta-buttons">
-                <a href="https://pianomaker.art" class="cta-button">Start Learning Free</a>
-                <a href="https://pianomaker.art" class="cta-button secondary">Try Piano Tiles Now</a>
-            </div>
-            
-            <p class="trust-line">⭐ No subscription • ⭐ No credit card • ⭐ Works on all devices</p>
+            <a href="https://pianomaker.art" class="logo">PianoMaker</a>
+            <nav>
+                <a href="https://pianomaker.art">Home</a>
+                <a href="https://song.pianomaker.art/repertory">Repertory</a>
+                <a href="https://song.pianomaker.art/blog">Blog</a>
+                <a href="https://pianomaker.art" class="nav-cta">Try Free Now</a>
+            </nav>
         </div>
     </div>
 
-    <!-- What is PianoMaker Section -->
+    <!-- Hero Section -->
+    <div class="hero">
+        <div class="container">
+            <h1>PianoMaker vs Songscription: Complete 2025 Comparison</h1>
+            <p class="subtitle">An honest, detailed comparison of two AI-powered piano transcription platforms to help you choose the right tool for your needs</p>
+            <p class="trust-line">⭐ Updated October 2025 • Independent Review</p>
+        </div>
+    </div>
+
+    <!-- Overview Section -->
     <section class="white-bg">
         <div class="container">
-            <h2>What is PianoMaker?</h2>
+            <h2>Platform Overview</h2>
             
-            <p class="intro-text">PianoMaker is a revolutionary FREE AI-powered piano learning platform that transforms how you learn music. Unlike traditional piano apps or subscription-based services like Songscription, PianoMaker combines cutting-edge AI transcription technology with an engaging Piano Tiles gameplay experience to make learning piano accessible, fun, and completely free for everyone.</p>
+            <p class="intro-text">Both PianoMaker and Songscription use AI to transcribe music into piano notation, but they take very different approaches to pricing, features, and user experience. This comprehensive comparison will help you understand which platform best fits your needs, budget, and learning style.</p>
             
-            <p class="intro-text">The platform allows you to upload any audio file or import songs directly from TikTok, Instagram, and SoundCloud. Within seconds, PianoMaker's AI transcribes the music into playable piano notes, complete with an interactive Piano Tiles player that shows you exactly when to press each key. Every song comes with warm-ups, fingering guides, and progressive difficulty levels to ensure you build proper technique while learning your favorite music.</p>
-            
-            <p class="intro-text">What sets PianoMaker apart is its commitment to being 100% FREE FOREVER. No hidden costs, no subscription tiers, no credit card required. You get unlimited access to AI transcription, Piano Tiles gameplay, structured lessons, and professional export options, all without spending a penny. It works on any device through your browser, making it the most accessible piano learning solution available in 2025.</p>
-            
-            <div class="features-grid">
-                <div class="feature-box">
-                    <div class="feature-emoji">🤖</div>
-                    <h3>AI Music Transcription</h3>
-                    <p>Upload MP3, WAV files or import directly from TikTok, Instagram, and SoundCloud. Our AI instantly transcribes any song into accurate piano notes you can play immediately.</p>
+            <div class="platform-overview">
+                <div class="platform-card">
+                    <div class="platform-name" style="color: #667eea;">PianoMaker</div>
+                    <div class="platform-tagline">"Interactive Piano Learning Platform"</div>
+                    <div class="price-tag price-free">100% FREE Forever</div>
+                    
+                    <p><strong>What it is:</strong> A free, browser-based piano learning platform that combines AI transcription with an interactive Piano Tiles gameplay experience and structured learning exercises.</p>
+                    
+                    <p style="margin-top: 15px;"><strong>Best for:</strong> Budget-conscious learners, visual learners who prefer gameplay-style learning, beginners who need structured guidance, and anyone wanting to learn trending songs from social media.</p>
                 </div>
                 
-                <div class="feature-box">
-                    <div class="feature-emoji">🎮</div>
-                    <h3>Interactive Piano Tiles</h3>
-                    <p>Learn through gameplay with notes falling like Guitar Hero. See exactly when to press each key in real-time, making complex songs feel achievable and fun.</p>
-                </div>
-                
-                <div class="feature-box">
-                    <div class="feature-emoji">📖</div>
-                    <h3>Structured Learning System</h3>
-                    <p>Every song includes warm-up exercises, fingering guides, technique drills, and progressive difficulty levels to build proper piano fundamentals.</p>
+                <div class="platform-card">
+                    <div class="platform-name" style="color: #e53e3e;">Songscription</div>
+                    <div class="platform-tagline">"Shazam for Sheet Music"</div>
+                    <div class="price-tag price-paid">$29.99/month Pro</div>
+                    
+                    <p><strong>What it is:</strong> An AI transcription service that converts audio files into sheet music and piano roll visualizations. Founded by Stanford graduates, it focuses on accurate transcription with traditional notation output.</p>
+                    
+                    <p style="margin-top: 15px;"><strong>Best for:</strong> Professional musicians who need high-quality transcriptions, composers documenting their work, serious students willing to pay for premium accuracy, and those who prefer traditional sheet music.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Problem/Solution Section -->
+    <!-- Detailed Comparison Table -->
     <section class="gray-bg">
         <div class="container">
-            <h2>Why Choose PianoMaker Over Songscription?</h2>
-            
-            <div class="problem-grid">
-                <div class="problem-box">
-                    <div class="problem-title">❌ Problem: Expensive Subscriptions</div>
-                    <p>Songscription charges monthly fees that add up to hundreds of dollars per year, creating a financial barrier for passionate learners.</p>
-                    <div class="solution-title">✅ PianoMaker Solution:</div>
-                    <p>Completely FREE forever. No subscription, no credit card, unlimited access to all features. Save your money for an actual piano or keyboard.</p>
-                </div>
-                
-                <div class="problem-box">
-                    <div class="problem-title">❌ Problem: Limited Learning Methods</div>
-                    <p>Traditional platforms only show you sheet music or MIDI rolls, which can be boring and hard to follow for visual learners.</p>
-                    <div class="solution-title">✅ PianoMaker Solution:</div>
-                    <p>Our Piano Tiles gameplay makes learning interactive and fun. Notes fall in real-time, showing exactly when to play, turning practice into an engaging game.</p>
-                </div>
-                
-                <div class="problem-box">
-                    <div class="problem-title">❌ Problem: No Social Media Integration</div>
-                    <p>Most platforms require you to manually search their library, which often doesn't include trending songs from TikTok or Instagram.</p>
-                    <div class="solution-title">✅ PianoMaker Solution:</div>
-                    <p>Import viral songs directly from TikTok, Instagram, and SoundCloud with one click. Learn the music that's trending right now, not just classical pieces.</p>
-                </div>
-                
-                <div class="problem-box">
-                    <div class="problem-title">❌ Problem: Lacks Proper Technique Training</div>
-                    <p>Many apps focus only on playing notes without teaching proper fingering, posture, or technique, leading to bad habits.</p>
-                    <div class="solution-title">✅ PianoMaker Solution:</div>
-                    <p>Every song includes warm-ups, fingering guides, and technique drills. We help you build professional piano fundamentals from day one.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Unique Features Section -->
-    <section class="white-bg">
-        <div class="container">
-            <h2>Exclusive Features You Won't Find in Songscription</h2>
-            
-            <div class="unique-features">
-                <div class="unique-box">
-                    <span class="unique-emoji">🎮</span>
-                    <h3>Piano Tiles Gameplay Experience</h3>
-                    <p>PianoMaker transforms piano learning into an immersive gaming experience with our Piano Tiles player. Notes cascade down the screen like Guitar Hero, providing real-time visual guidance that shows you exactly when to press each key. This gamification approach makes practice sessions feel less like work and more like entertainment, dramatically increasing engagement and practice time. The visual feedback helps you develop better timing and rhythm naturally, while the game-like progression keeps you motivated to improve. Perfect for visual learners who struggle with traditional sheet music, and engaging enough to keep even beginners practicing for hours without realizing how much they're learning.</p>
-                    <div class="highlight-box">🎯 Songscription doesn't have this interactive gameplay feature!</div>
-                </div>
-                
-                <div class="unique-box">
-                    <span class="unique-emoji">🔥</span>
-                    <h3>TikTok & Instagram Import</h3>
-                    <p>Stay current with trending music by importing songs directly from TikTok, Instagram, and SoundCloud. PianoMaker is the only piano learning platform that integrates with social media, allowing you to learn viral songs the moment they become popular. No more waiting for someone to transcribe your favorite trending audio or searching through outdated song libraries. Simply paste the link from any social media platform, and our AI instantly transcribes it into playable piano notes complete with Piano Tiles visualization. This feature is perfect for content creators who want to learn trending songs for their own videos, music enthusiasts who want to play what they hear on social media, or anyone who wants their piano repertoire to reflect contemporary popular music rather than being limited to classical pieces and old standards.</p>
-                    <div class="highlight-box">🎯 Songscription requires you to use their limited song library only!</div>
-                </div>
-                
-                <div class="unique-box">
-                    <span class="unique-emoji">📚</span>
-                    <h3>Complete Structured Learning Path</h3>
-                    <p>Unlike platforms that simply give you notes to play, PianoMaker provides a comprehensive learning system for every single song. Each piece comes with customized warm-up exercises to prepare your fingers, detailed fingering guides showing optimal hand positions, technique drills targeting specific challenges in the song, and progressive difficulty levels that let you master sections gradually before attempting the full arrangement. This structured approach ensures you're not just memorizing songs, but actually developing proper piano technique, muscle memory, and musical understanding. The system adapts to your skill level, breaking complex pieces into manageable sections and providing practice exercises that build the specific skills needed for each song. It's like having a professional piano teacher embedded in every lesson, guiding you from your first notes to advanced performance.</p>
-                    <div class="highlight-box">🎯 Songscription lacks this comprehensive pedagogical approach!</div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Comparison Table Section -->
-    <section class="gray-bg">
-        <div class="container">
-            <h2>PianoMaker vs Songscription: Feature Comparison</h2>
+            <h2>Feature-by-Feature Comparison</h2>
             
             <table class="comparison-table">
                 <thead>
@@ -500,152 +459,276 @@
                     </tr>
                 </thead>
                 <tbody>
+                    <!-- Pricing -->
+                    <tr class="feature-category">
+                        <td colspan="3"><strong>💰 PRICING & ACCESS</strong></td>
+                    </tr>
                     <tr class="highlight">
-                        <td><strong>Price</strong></td>
-                        <td><span class="check">✓</span> 100% FREE Forever</td>
-                        <td><span class="cross">✗</span> $19.99/month</td>
+                        <td><strong>Monthly Cost</strong></td>
+                        <td><span class="check">✓</span> $0 (Completely Free)</td>
+                        <td><span class="cross">✗</span> $29.99/month (Pro tier)</td>
+                    </tr>
+                    <tr>
+                        <td>Free Tier Available</td>
+                        <td><span class="check">✓</span> Full access to all features</td>
+                        <td><span class="partial">⚠</span> Limited (basic transcriptions only)</td>
+                    </tr>
+                    <tr>
+                        <td>Credit Card Required</td>
+                        <td><span class="check">✓</span> No credit card needed</td>
+                        <td><span class="cross">✗</span> Required for Pro features</td>
+                    </tr>
+                    <tr>
+                        <td>Transcription Limits</td>
+                        <td><span class="check">✓</span> Unlimited</td>
+                        <td><span class="partial">⚠</span> Free: Limited | Pro: 100/month (15 min each)</td>
+                    </tr>
+                    
+                    <!-- Core Transcription -->
+                    <tr class="feature-category">
+                        <td colspan="3"><strong>🎵 TRANSCRIPTION FEATURES</strong></td>
                     </tr>
                     <tr>
                         <td>AI Music Transcription</td>
-                        <td><span class="check">✓</span> Unlimited</td>
-                        <td><span class="check">✓</span> Limited uploads</td>
+                        <td><span class="check">✓</span> Yes</td>
+                        <td><span class="check">✓</span> Yes (Higher accuracy claimed)</td>
                     </tr>
                     <tr>
-                        <td>Piano Tiles Gameplay</td>
+                        <td>Audio File Upload</td>
+                        <td><span class="check">✓</span> MP3, WAV</td>
+                        <td><span class="check">✓</span> MP3, WAV, M4A</td>
+                    </tr>
+                    <tr>
+                        <td>Maximum Song Length</td>
+                        <td><span class="check">✓</span> No stated limit</td>
+                        <td><span class="partial">⚠</span> Free: Limited | Pro: 15 minutes</td>
+                    </tr>
+                    <tr>
+                        <td>Piano Roll Visualization</td>
+                        <td><span class="check">✓</span> Yes (Piano Tiles format)</td>
+                        <td><span class="check">✓</span> Yes (Interactive piano roll)</td>
+                    </tr>
+                    <tr>
+                        <td>Sheet Music Output</td>
+                        <td><span class="check">✓</span> Yes</td>
+                        <td><span class="check">✓</span> Yes (Primary focus)</td>
+                    </tr>
+                    <tr>
+                        <td>Polyphonic Detection</td>
+                        <td><span class="check">✓</span> Yes</td>
+                        <td><span class="check">✓</span> Yes (Better for complex pieces)</td>
+                    </tr>
+                    
+                    <!-- Learning Features -->
+                    <tr class="feature-category">
+                        <td colspan="3"><strong>📚 LEARNING & PRACTICE</strong></td>
+                    </tr>
+                    <tr>
+                        <td>Interactive Piano Tiles Gameplay</td>
                         <td><span class="check">✓</span> Full interactive player</td>
                         <td><span class="cross">✗</span> Not available</td>
                     </tr>
                     <tr>
-                        <td>TikTok Import</td>
-                        <td><span class="check">✓</span> Direct import</td>
-                        <td><span class="cross">✗</span> Not supported</td>
-                    </tr>
-                    <tr>
-                        <td>Instagram Import</td>
-                        <td><span class="check">✓</span> Direct import</td>
-                        <td><span class="cross">✗</span> Not supported</td>
-                    </tr>
-                    <tr>
-                        <td>SoundCloud Import</td>
-                        <td><span class="check">✓</span> Direct import</td>
-                        <td><span class="cross">✗</span> Not supported</td>
-                    </tr>
-                    <tr>
                         <td>Warm-up Exercises</td>
-                        <td><span class="check">✓</span> Every song</td>
+                        <td><span class="check">✓</span> Included with every song</td>
                         <td><span class="cross">✗</span> Not included</td>
                     </tr>
                     <tr>
                         <td>Fingering Guides</td>
                         <td><span class="check">✓</span> Professional guidance</td>
-                        <td><span class="cross">✗</span> Basic only</td>
-                    </tr>
-                    <tr>
-                        <td>Technique Drills</td>
-                        <td><span class="check">✓</span> Comprehensive</td>
                         <td><span class="cross">✗</span> Not available</td>
                     </tr>
                     <tr>
                         <td>Progressive Difficulty</td>
-                        <td><span class="check">✓</span> Adaptive learning</td>
-                        <td><span class="cross">✗</span> Fixed difficulty</td>
+                        <td><span class="check">✓</span> Adaptive learning path</td>
+                        <td><span class="cross">✗</span> Transcription only</td>
                     </tr>
                     <tr>
-                        <td>PDF Sheet Music Export</td>
+                        <td>Technique Drills</td>
+                        <td><span class="check">✓</span> Song-specific exercises</td>
+                        <td><span class="cross">✗</span> Not included</td>
+                    </tr>
+                    <tr>
+                        <td>Audio Playback Sync</td>
+                        <td><span class="check">✓</span> Real-time with Piano Tiles</td>
+                        <td><span class="check">✓</span> Synced with piano roll</td>
+                    </tr>
+                    
+                    <!-- Import Options -->
+                    <tr class="feature-category">
+                        <td colspan="3"><strong>📲 IMPORT & INTEGRATION</strong></td>
+                    </tr>
+                    <tr>
+                        <td>TikTok Direct Import</td>
+                        <td><span class="check">✓</span> Paste link to import</td>
+                        <td><span class="cross">✗</span> Not supported</td>
+                    </tr>
+                    <tr>
+                        <td>Instagram Direct Import</td>
+                        <td><span class="check">✓</span> Paste link to import</td>
+                        <td><span class="cross">✗</span> Not supported</td>
+                    </tr>
+                    <tr>
+                        <td>SoundCloud Integration</td>
+                        <td><span class="check">✓</span> Direct import</td>
+                        <td><span class="cross">✗</span> Not supported</td>
+                    </tr>
+                    <tr>
+                        <td>YouTube Import</td>
+                        <td><span class="check">✓</span> Via audio extraction</td>
+                        <td><span class="partial">⚠</span> Possible (not advertised)</td>
+                    </tr>
+                    
+                    <!-- Export Options -->
+                    <tr class="feature-category">
+                        <td colspan="3"><strong>💾 EXPORT & SHARING</strong></td>
+                    </tr>
+                    <tr>
+                        <td>PDF Sheet Music</td>
                         <td><span class="check">✓</span> Free unlimited</td>
-                        <td><span class="check">✓</span> Available</td>
+                        <td><span class="check">✓</span> Available (Pro tier)</td>
                     </tr>
                     <tr>
                         <td>MIDI Export</td>
                         <td><span class="check">✓</span> Free unlimited</td>
-                        <td><span class="check">✓</span> Premium only</td>
+                        <td><span class="check">✓</span> Available (Pro tier)</td>
                     </tr>
                     <tr>
                         <td>MusicXML Export</td>
                         <td><span class="check">✓</span> Free unlimited</td>
-                        <td><span class="cross">✗</span> Not supported</td>
+                        <td><span class="partial">⚠</span> Unknown availability</td>
                     </tr>
                     <tr>
-                        <td>Works on Mobile</td>
-                        <td><span class="check">✓</span> All devices</td>
-                        <td><span class="check">✓</span> App required</td>
+                        <td>Export Limitations</td>
+                        <td><span class="check">✓</span> No limitations</td>
+                        <td><span class="partial">⚠</span> Limited on free tier</td>
+                    </tr>
+                    
+                    <!-- Platform & Accessibility -->
+                    <tr class="feature-category">
+                        <td colspan="3"><strong>💻 PLATFORM & USABILITY</strong></td>
                     </tr>
                     <tr>
                         <td>Browser-Based</td>
-                        <td><span class="check">✓</span> No download needed</td>
-                        <td><span class="cross">✗</span> App download required</td>
+                        <td><span class="check">✓</span> No downloads needed</td>
+                        <td><span class="check">✓</span> Web-based</td>
+                    </tr>
+                    <tr>
+                        <td>Mobile Compatible</td>
+                        <td><span class="check">✓</span> All devices</td>
+                        <td><span class="check">✓</span> All devices</td>
+                    </tr>
+                    <tr>
+                        <td>Offline Access</td>
+                        <td><span class="cross">✗</span> Online only (can export)</td>
+                        <td><span class="cross">✗</span> Online only (can export)</td>
+                    </tr>
+                    <tr>
+                        <td>Learning Curve</td>
+                        <td><span class="check">✓</span> Beginner-friendly</td>
+                        <td><span class="partial">⚠</span> Requires music reading skills</td>
+                    </tr>
+                    
+                    <!-- Quality & Accuracy -->
+                    <tr class="feature-category">
+                        <td colspan="3"><strong>🎯 QUALITY & ACCURACY</strong></td>
+                    </tr>
+                    <tr>
+                        <td>Transcription Accuracy</td>
+                        <td><span class="check">✓</span> Good for clean audio</td>
+                        <td><span class="check">✓</span> Excellent (Stanford-trained AI)</td>
+                    </tr>
+                    <tr>
+                        <td>Manual Editing Tools</td>
+                        <td><span class="partial">⚠</span> Basic adjustments</td>
+                        <td><span class="check">✓</span> Advanced editing features</td>
+                    </tr>
+                    <tr>
+                        <td>Complex Polyphony</td>
+                        <td><span class="partial">⚠</span> Good, may need tweaking</td>
+                        <td><span class="check">✓</span> Excellent handling</td>
                     </tr>
                 </tbody>
             </table>
         </div>
     </section>
 
-    <!-- Testimonials Section -->
+    <!-- Pros and Cons -->
     <section class="white-bg">
         <div class="container">
-            <h2>What PianoMaker Users Are Saying</h2>
+            <h2>Strengths & Weaknesses</h2>
             
-            <div class="testimonials-grid">
-                <div class="testimonial">
-                    <p class="testimonial-text">"I was paying $25/month for Songscription when I discovered PianoMaker. The Piano Tiles feature is incredible - it's like Guitar Hero for piano! I've learned more songs in 2 months with PianoMaker than I did in a year with my old subscription. And it's completely free!"</p>
-                    <p class="testimonial-author">Sarah Chen</p>
-                    <p class="testimonial-role">College Student, California</p>
+            <div class="pros-cons-grid">
+                <!-- PianoMaker -->
+                <div>
+                    <div class="pros-cons-box pros-box">
+                        <h3><span style="color: #48bb78;">✓</span> PianoMaker Strengths</h3>
+                        <ul>
+                            <li><strong>100% Free Forever:</strong> No subscription, no credit card, no hidden costs. Save $360/year compared to Songscription.</li>
+                            <li><strong>Interactive Piano Tiles:</strong> Unique gamified learning experience that makes practice fun and engaging.</li>
+                            <li><strong>Social Media Integration:</strong> Import trending songs directly from TikTok, Instagram, and SoundCloud.</li>
+                            <li><strong>Structured Learning System:</strong> Includes warm-ups, fingering guides, and technique drills - like having a piano teacher built-in.</li>
+                            <li><strong>Perfect for Beginners:</strong> Visual learning approach is less intimidating than traditional sheet music.</li>
+                            <li><strong>Unlimited Transcriptions:</strong> No monthly limits on how many songs you can transcribe.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pros-cons-box cons-box">
+                        <h3><span style="color: #e53e3e;">✗</span> PianoMaker Limitations</h3>
+                        <ul>
+                            <li><strong>Transcription Accuracy:</strong> May not match Songscription's accuracy on very complex polyphonic pieces.</li>
+                            <li><strong>Limited Manual Editing:</strong> Fewer advanced editing tools for fine-tuning transcriptions.</li>
+                            <li><strong>Newer Platform:</strong> Less established than Songscription, still building reputation.</li>
+                            <li><strong>Focus on Piano Only:</strong> Optimized primarily for piano, not multi-instrument transcription.</li>
+                        </ul>
+                    </div>
                 </div>
                 
-                <div class="testimonial">
-                    <p class="testimonial-text">"As a TikTok content creator, being able to import trending songs directly from TikTok is a game changer. I can learn the viral piano covers everyone wants to hear within hours of them trending. PianoMaker has helped me grow my following significantly."</p>
-                    <p class="testimonial-author">Marcus Johnson</p>
-                    <p class="testimonial-role">Content Creator, New York</p>
-                </div>
-                
-                <div class="testimonial">
-                    <p class="testimonial-text">"The structured learning system with warm-ups and fingering guides is exactly what I needed. Other platforms just threw me into songs, but PianoMaker teaches proper technique. My piano teacher even noticed improvement in my hand positioning!"</p>
-                    <p class="testimonial-author">Emma Rodriguez</p>
-                    <p class="testimonial-role">High School Student, Texas</p>
-                </div>
-                
-                <div class="testimonial">
-                    <p class="testimonial-text">"I switched from Songscription to PianoMaker and haven't looked back. The Piano Tiles visualization helps me learn complex pieces so much faster than reading traditional sheet music. Plus, I'm saving $240 a year by using a free platform!"</p>
-                    <p class="testimonial-author">David Kim</p>
-                    <p class="testimonial-role">Software Engineer, Seattle</p>
-                </div>
-                
-                <div class="testimonial">
-                    <p class="testimonial-text">"The AI transcription is incredibly accurate. I can upload any song from SoundCloud or Instagram and start learning it immediately. The fact that this is completely free while competitors charge monthly fees is amazing."</p>
-                    <p class="testimonial-author">Lisa Martinez</p>
-                    <p class="testimonial-role">Music Teacher, Florida</p>
-                </div>
-                
-                <div class="testimonial">
-                    <p class="testimonial-text">"Piano Tiles makes practice actually fun! My kids were getting bored with traditional piano lessons, but now they beg to practice because it feels like playing a game. We've saved hundreds on subscription fees too."</p>
-                    <p class="testimonial-author">Jennifer Thompson</p>
-                    <p class="testimonial-role">Parent of Two, Illinois</p>
+                <!-- Songscription -->
+                <div>
+                    <div class="pros-cons-box pros-box">
+                        <h3><span style="color: #48bb78;">✓</span> Songscription Strengths</h3>
+                        <ul>
+                            <li><strong>High Transcription Accuracy:</strong> Stanford-trained AI delivers excellent results on complex pieces.</li>
+                            <li><strong>Professional Quality:</strong> Produces publication-ready sheet music suitable for professional use.</li>
+                            <li><strong>Advanced Editing Tools:</strong> Comprehensive editing interface for fine-tuning every detail.</li>
+                            <li><strong>Strong Reputation:</strong> Backed by Reach Capital, featured in TechCrunch and major tech publications.</li>
+                            <li><strong>Traditional Sheet Music Focus:</strong> Perfect for those who prefer classical notation over visual learning.</li>
+                            <li><strong>Multi-Instrument Support:</strong> Working on support for guitar, strings, and full arrangements.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pros-cons-box cons-box">
+                        <h3><span style="color: #e53e3e;">✗</span> Songscription Limitations</h3>
+                        <ul>
+                            <li><strong>Expensive:</strong> $29.99/month ($360/year) creates a significant financial barrier.</li>
+                            <li><strong>Monthly Transcription Limits:</strong> Even Pro tier limits you to 100 transcriptions per month.</li>
+                            <li><strong>No Learning Features:</strong> Pure transcription service without warm-ups, exercises, or structured lessons.</li>
+                            <li><strong>No Social Media Integration:</strong> Cannot import from TikTok, Instagram, or SoundCloud.</li>
+                            <li><strong>Requires Music Reading:</strong> Less accessible for beginners who don't read sheet music well.</li>
+                            <li><strong>Limited Free Tier:</strong> Free version has significant restrictions on length and quality.</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- FAQ Section -->
+    <!-- Use Cases -->
     <section class="gray-bg">
         <div class="container">
-            <h2>Frequently Asked Questions</h2>
+            <h2>Which Platform Should You Choose?</h2>
             
-            <div class="faq-container">
-                <div class="faq-item">
-                    <div class="faq-question">Is PianoMaker really completely free?</div>
-                    <div class="faq-answer">Yes, PianoMaker is 100% FREE FOREVER with no hidden costs, subscription fees, or premium tiers. You get unlimited access to all features including AI transcription, Piano Tiles gameplay, social media imports, structured lessons, and professional export options. We don't require a credit card, and there are no feature limitations or trial periods. Unlike Songscription which charges $19.99/month, PianoMaker believes music education should be accessible to everyone regardless of financial circumstances. Our mission is to democratize piano learning by providing professional-quality tools completely free of charge. We're committed to keeping the platform free forever because we believe everyone deserves the opportunity to learn music.</div>
-                </div>
+            <div class="verdict-box">
+                <h3>🎯 The Verdict</h3>
+                <p class="intro-text">The "better" platform depends entirely on your specific needs, budget, and learning style. Here's our honest recommendation based on different use cases:</p>
                 
-                <div class="faq-item">
-                    <div class="faq-question">How is PianoMaker different from Songscription?</div>
-                    <div class="faq-answer">The main differences are that PianoMaker is completely free while Songscription requires a paid subscription, PianoMaker offers an interactive Piano Tiles gameplay experience that Songscription lacks, and PianoMaker allows direct imports from TikTok, Instagram, and SoundCloud which Songscription doesn't support. Additionally, PianoMaker provides comprehensive structured learning with warm-ups, fingering guides, and technique drills for every song, whereas Songscription focuses primarily on transcription without the pedagogical framework. PianoMaker works directly in your browser on any device without requiring app downloads, making it more accessible. The combination of gamified learning through Piano Tiles, social media integration, structured technique development, and completely free access makes PianoMaker a superior choice for modern piano learners who want an engaging, comprehensive, and affordable learning experience.</div>
-                </div>
-                
-                <div class="faq-item">
-                    <div class="faq-question">What is the Piano Tiles feature and how does it help me learn?</div>
-                    <div class="faq-answer">Piano Tiles is an interactive gameplay feature where musical notes fall down the screen in real-time, showing you exactly when to press each key on your piano or keyboard. It works similarly to rhythm games like Guitar Hero but specifically designed for piano learning. As you play along, the visual feedback helps you develop better timing, rhythm, and finger coordination naturally. The gaming aspect makes practice sessions more engaging and fun, dramatically increasing the amount of time students spend practicing. Research shows that gamification in music education increases retention and motivation, which is why Piano Tiles is so effective. The visual nature of falling notes is particularly helpful for beginners who struggle with reading traditional sheet music, and it helps intermediate players tackle complex pieces by breaking them into manageable, real-time visual chunks. The system provides immediate feedback on timing and accuracy, helping you improve faster than traditional learning methods.</div>
-                </div>
-                
-                <div class="faq-item">
-                    <div class="faq-question">Can I import songs from TikTok, Instagram, and SoundCloud?</div>
-                    <div class="faq-answer">Absolutely! PianoMaker offers seamless integration with TikTok, Instagram, and SoundCloud, making it incredibly easy to learn trending music. Simply copy the link to any audio or video from these platforms and paste it into PianoMaker. Our AI will instantly transcribe the audio into playable piano notes complete with Piano Tiles visualization, fingering guides, and structured lessons. This feature is perfect for staying current with viral songs, learning music that's trending on social media, or transcribing specific versions or covers you discover online. Unlike Songscription which limits you to their pre-existing library, PianoMaker gives you access to virtually unlimited music from across the internet. Whether it's a new pop hit trending on TikTok, a beautiful piano cover on Instagram, or an indie track on SoundCloud, you can learn it immediately with Pi
+                <div class="use-case-grid">
+                    <div class="use-case-card">
+                        <strong>Choose PianoMaker if:</strong>
+                        <p>You're a beginner or intermediate player, prefer visual/gamified learning, want to learn trending songs from social media, need structured exercises and technique guidance, or simply want a completely free solution with no monthly costs.</p>
+                    </div>
+                    
+                    <div class="use-case-card">
+                        <strong>Choose Songscription if:</strong>
+                        <p>You're a professional musician or composer, need the highest transcription
